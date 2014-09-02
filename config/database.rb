@@ -23,25 +23,6 @@ ActiveRecord::Base.configurations[Padrino.env] = {
 
 }
 
-ActiveRecord::Base.configurations[:production] = {
-  :adapter   => 'postgresql',
-  :database  => 'website_production',
-  :username  => 'root',
-  :password  => '',
-  :host      => 'localhost',
-  :port      => 5432
-
-}
-
-ActiveRecord::Base.configurations[:test] = {
-  :adapter   => 'postgresql',
-  :database  => 'website_test',
-  :username  => 'root',
-  :password  => '',
-  :host      => 'localhost',
-  :port      => 5432
-
-}
 
 # Setup our logger
 ActiveRecord::Base.logger = logger
