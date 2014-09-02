@@ -7,6 +7,9 @@ module Website
 
     enable :sessions
 
+    get :index do 
+    end 
+
     ##
     # Caching support.
     #
