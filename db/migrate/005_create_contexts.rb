@@ -1,6 +1,9 @@
 class CreateContexts < ActiveRecord::Migration
   def change 
-  	create table :contexts do |t|
+  	create_table :contexts do |t|
+  		t.string :name
+
+  		t.timestamps
   	end 
   end
 end
