@@ -4,7 +4,7 @@ A website built with Padrino.
 
 ###Immediate Goals: 
 
-+ Find ideal way to implement frontend ideas.  
++ Find ideal way to implement frontend ideas. 
 
 ### Eventual Goals: 
 
