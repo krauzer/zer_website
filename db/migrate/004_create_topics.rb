@@ -1,7 +1,11 @@
 class CreateTopics < ActiveRecord::Migration
-  def self.up
-  end
+  def change 
+  	create_table :topics do |t|
+  		t.string :name
+  		t.integer :topicable_id
+  		t.string :topicable_type
 
-  def self.down
-  end
+  		t.timestamps
+  	end 
+  end 
 end
