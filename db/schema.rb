@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 7) do
+ActiveRecord::Schema.define(version: 9) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,10 +47,14 @@ ActiveRecord::Schema.define(version: 7) do
     t.integer "piece_id"
   end
 
+  create_table "topicable_topics", force: true do |t|
+    t.integer "topicable_id"
+    t.string  "topicable_type"
+    t.integer "topic_id"
+  end
+
   create_table "topics", force: true do |t|
     t.string   "name"
-    t.integer  "topicable_id"
-    t.string   "topicable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
