@@ -1,6 +1,7 @@
 class Topic < ActiveRecord::Base
-	belongs_to :topicable, polymorphic: true 
-	has_many :topics, as: :topicable
-	has_many :pieces
-	
+	has_many :topic_pieces 
+	has_many :pieces, through: :topic_pieces
+	has_many :topicable_topics, as: :topicable
+  has_many :contexts, through: :topicable_topics
+  has_many :topics, through: :topicable_topics
 end 
