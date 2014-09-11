@@ -24,7 +24,7 @@ function Particle(img, posx, posy) {
 	this.age = 0; 
 	this.frozen = false; 
 
-	this.currentState = {}; 
+	this.currentStates = {}; 
 
 	this.compositeOperation = 'source-over'; 
 }
@@ -43,3 +43,8 @@ Particle.prototype.mature = function() {
 		this.age = date.getTime() - this.createdAt; 
 	}
 }
+
+Particle.prototype.getCurrentState = function() {
+	return this.currentStates
+}
+
