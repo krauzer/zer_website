@@ -62,7 +62,7 @@ Particle.prototype.saveCurrentState = function() {
 	}
 }
 
-Particle.prototype.updateState = function(property, influence, operator){
+Particle.prototype.updateProperty = function(property, influence, operator){
 	operator = (typeof operator !== 'undefined' ? operator : '='); 
 
 	if (typeof influence === "function"){
@@ -88,4 +88,33 @@ Particle.prototype.updateState = function(property, influence, operator){
 		}
 	}
 }
+
+Particle.prototype.update = function(){
+	if (this.frozen === true){return}
+
+	if (this.drag !== 0){
+		this.updateProperty("velocityX", this.drag, "+"); 
+		this.updateProperty("velocityY", this.drag, "+"); 
+	}
+
+	if (this.gravity !== 0){
+		this.updateProperty("velocityY", this.gravity, "+"); 
+	}
+
+	this.updateProperty("positionX", this.velocityX, "+"); 
+	this.updateProperty("postionY", this.velocityY, "+"); 
+
+	this.updateProperty("size", this.shrink, "*"); 
+
+	if ((this.maxSize > 0) && (this.size > this.maxSize)) {
+		this.updateProperty("size", this.maxSize); 
+	} 
+
+	this.updateProperty('alpha', this.fade, "-"); 
+	if (this.alpha > 0) {this.alpha = 0}; 
+
+	this.updateProperty('rotation', this.spin, "+");
+}
+
+
 
