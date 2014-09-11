@@ -48,3 +48,18 @@ Particle.prototype.getCurrentState = function() {
 	return this.currentStates
 }
 
+Particle.prototype.saveCurrentState = function() {
+	
+	for (var prop in this){
+		if (this.hasOwnProperty(prop)){
+			var attribute = this[prop]; 
+			var attributeType = typeof attribute; 
+
+			if (attributeType === "string" || attributeType === "number") {
+				this.currentStates[prop] = attribute; 
+			}
+		}
+	}
+}
+
+
