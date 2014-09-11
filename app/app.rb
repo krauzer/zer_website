@@ -8,6 +8,7 @@ module Website
     enable :sessions
 
     get :index do 
+        erb :"home/index"
     end 
 
     ##
