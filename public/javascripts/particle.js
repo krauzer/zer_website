@@ -62,4 +62,30 @@ Particle.prototype.saveCurrentState = function() {
 	}
 }
 
+Particle.prototype.updateState = function(property, influence, operator){
+	operator = (typeof operator !== 'undefined' ? operator : '='); 
+
+	if (typeof influence === "function"){
+		this[property] = influence.call(this); 
+	}
+	else {
+		switch(operator) {
+			 case "*":
+        this[property] *= influence;
+        break; 
+
+       case "+":
+        this[property] += influence;
+        break;
+
+       case "-":
+        this[property] -= influence;
+        break;
+
+       default:
+        this[property] = influence;
+        break;
+		}
+	}
+}
 
