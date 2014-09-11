@@ -3,5 +3,15 @@ function Particle(img, posx, posy) {
 	this.body = img; 
 	this.positionX = posx; 
 	this.positionY = posy; 
+	this.size = 1; 
+	this.maxSize = -1; 
+
+	this.shrink = 1; 
+
+	this.velocityX = 0; 
+	this.velocityY= 0; 
+	this.drag = 1; 
+	this.gravity = 0; 
+
 
 }
