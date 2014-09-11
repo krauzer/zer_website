@@ -13,5 +13,11 @@ function Particle(img, posx, posy) {
 	this.drag = 1; 
 	this.gravity = 0; 
 
+	this.alpha = 1; 
+	this.fade = 0; 
+	this.flicker = false; 
+
+	this.spin = 0; 
+	this.rotation = 0; 
 
 }
