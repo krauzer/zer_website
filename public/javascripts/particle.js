@@ -19,7 +19,7 @@ function Particle(img, posx, posy) {
 
 	this.spin = 0; 
 	this.rotation = 0; 
-	
+
 	this.createdAt = 0; 
 	this.age = 0; 
 	this.frozen = false; 
@@ -27,4 +27,10 @@ function Particle(img, posx, posy) {
 	this.currentState = {}; 
 
 	this.compositeOperation = 'source-over'; 
+}
+
+Particle.prototype.begin = function() {
+
+	var date = new Date(); 
+	this.createdAt = d.getTime(); 
 }
