@@ -19,6 +19,7 @@ gem 'erubis', '~> 2.7.0'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'pg'
 gem 'dotenv'
+gem 'compass'
 
 # Test requirements
 gem 'rspec', :group => 'test'
