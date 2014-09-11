@@ -30,7 +30,16 @@ function Particle(img, posx, posy) {
 }
 
 Particle.prototype.begin = function() {
-
 	var date = new Date(); 
 	this.createdAt = d.getTime(); 
+}
+
+Particle.prototype.mature = function() {
+	if (this.createdAt === 0) {
+		this.begin(); 
+	}
+	else {
+		date = Date new()
+		this.age = date.getTime() - this.createdAt; 
+	}
 }
