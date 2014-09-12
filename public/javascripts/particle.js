@@ -116,5 +116,30 @@ Particle.prototype.update = function(){
 	this.updateProperty('rotation', this.spin, "+");
 }
 
+Particle.prototype.render = function(){
+	
+	this.mature();
 
+	if (this.alpha == 0){return}
+
+	c.save();
+
+	c.translate(this.positionX, this.positionY); 
+
+	var sizeScaled = this.shimmer ? this.size * Math.random() : this.size; 
+	c.scale(sizeScaled, sizeScaled)
+
+	c.rotate(this.rotation * Particle.TO_RADIANS); 
+
+	c.translate(this.body.width* -0.5, this.body.width* -0.5); 
+
+	c.globalCompositeOperation = this.compositeOperation; 
+
+	c.drawImage(this.body,0,0)
+
+	c.restore(); 
+
+}
+
+Particle.TO_RADIANS = Math.PI / 180; 
 
