@@ -126,7 +126,7 @@ Particle.prototype.render = function(){
 
 	c.translate(this.positionX, this.positionY); 
 
-	var sizeScaled = this.shimmer ? this.size * Math.random() : this.size; 
+	var sizeScaled = this.flicker ? this.size * Math.random() : this.size; 
 	c.scale(sizeScaled, sizeScaled)
 
 	c.rotate(this.rotation * Particle.TO_RADIANS); 
