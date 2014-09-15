@@ -20,6 +20,7 @@ gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'pg'
 gem 'dotenv'
 gem 'compass'
+gem 'redcarpet'
 
 # Test requirements
 gem 'rspec', :group => 'test'
