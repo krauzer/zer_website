@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 9) do
+ActiveRecord::Schema.define(version: 10) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "contexts", force: true do |t|
+  create_table "frames", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
