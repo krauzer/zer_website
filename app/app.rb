@@ -9,8 +9,15 @@ module Website
 
     get :index do 
         erb :"home/index"
-    end 
+    end
 
+    get :index, :map => '/about' do
+        erb :"home/index"
+     end 
+
+    not_found do 
+        erb :"errors/404"
+    end 
     ##
     # Caching support.
     #
@@ -59,9 +66,10 @@ module Website
     ##
     # You can manage errors like:
     #
-    #   error 404 do
+     # error 404 do
     #     render 'errors/404'
     #   end
+    #
     #
     #   error 500 do
     #     render 'errors/500'
