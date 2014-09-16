@@ -1,24 +1,8 @@
 	<header class="index-head"> <span class="name">Dylan</span>
 	</header>
 	<div class="flex flex-fill content-wrapper">
-		<main class="content-view flex-fill">Main</main>
-		<nav class="flex-first flex flex-column flex-spaced left-nav">
-			<div class="nav-button">
-				<span class="show">Stories</span>
-			</div>
-			<div class="nav-button">
-				<span class="show">Thoughts</span>
-			</div>
-			<div class="nav-button">
-				<span class="show">About</span>
-			</div>
-			<div class="nav-button">
-				<span class="show">Log</span>
-			</div>
-		</nav>
+	<%= partial 'partials/main_show', object: @main %>
+	<%= partial 'partials/left_nav' %>
 	</div>
-<footer class="home-footer">
-footer
-</footer>
-
-
+	<%= partial 'partials/footer' %>
+	<%= javascript_include_tag 'log' %>
