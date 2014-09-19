@@ -1,0 +1,27 @@
+
+<div class="master-container">
+<header>
+	<p>Stories</p>
+</header>
+<div class="toc">
+	<table>
+	<tbody>
+		 <% @stories.each do |story| %>
+
+		<tr>
+			<td>
+				~
+				<p class="title">
+					<%= story.title %>
+				</p>
+				<p class="desc">
+					<%= story.description %>
+				</p>
+			</td>
+		</tr>
+		<% end %> 
+	</tbody>
+</table>
+</div>
+
+</div>
