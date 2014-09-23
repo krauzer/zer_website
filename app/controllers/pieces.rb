@@ -1,4 +1,5 @@
 Website::App.controllers :pieces do 
+  layout :pieces
 
   get :show, map: "/pieces/:id" do 
     markdown = create_parser 
