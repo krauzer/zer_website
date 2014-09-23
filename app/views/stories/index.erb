@@ -10,9 +10,10 @@
 
 		<tr>
 			<td>
-				~
 				<p class="title">
-					<%= story.title %>
+					~
+					<br>
+					<%= link_to "#{story.title}", "/stories/#{story.id}"%>
 				</p>
 				<p class="desc">
 					<%= story.description %>
