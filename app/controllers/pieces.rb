@@ -3,7 +3,7 @@ Website::App.controllers :pieces do
 
   get :show, map: "/pieces/:id" do 
     markdown = create_parser 
-    @piece = Piece.find(params[:id]
+    @piece = Piece.find(params[:id])
     unless @piece.nil? 
       @title = @piece.title
       @text = markdown.render(@piece.body).html_safe
