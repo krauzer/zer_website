@@ -1,3 +1,7 @@
 <footer class="home-footer">
-		
+	<% if @topics %>
+	<% @topics.each do |topic| %>
+		<div class="tab"><%= topic.name %></div>
+		<% end %>
+	<% end %>
 </footer>
