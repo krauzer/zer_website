@@ -6,4 +6,7 @@ Website::App.controllers :thoughts do
     erb :"thoughts/index"
   end
 
+  get :show , map: "/thoughts/:day" do
+    Thought.find_day(params[:day])
+  end
 end
