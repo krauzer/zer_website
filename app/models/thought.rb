@@ -33,7 +33,7 @@ class Thought < ActiveRecord::Base
     if today >= date_index
       day_wanted = Time.now.to_date.prev_day(today - date_index)
     else
-      day_wanted = Time.now.to_date.prev_day((today - dat_index)+ 7)
+      day_wanted = Time.now.to_date.prev_day((today - date_index)+ 7)
     end
     self.where(day: day_wanted)
   end
