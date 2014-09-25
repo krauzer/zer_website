@@ -42,6 +42,10 @@ class Thought < ActiveRecord::Base
     Date::DAYNAMES[day.wday]
   end
 
+  def body_sample
+    body.slice(/\A.*\./)
+  end
+
   private 
   def record_day
     self.day = Time.now.to_date
