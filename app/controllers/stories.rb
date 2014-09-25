@@ -5,9 +5,16 @@ Website::App.controllers :stories do
     @stories = Story.all
     erb :"stories/index"
   end 
-
-  get :show, map: "/stories/:id" do 
+  
+  layout :pieces
+  get :show, map: "/stories/:id" do
+    markdown = create_parser 
     @story = Story.find(params[:id])
+    unless @story.nil? 
+      @text = markdown.render(@story.body).html_safe
+      @title = @story.title
+    end
     erb :"stories/show"
   end 
+
 end
