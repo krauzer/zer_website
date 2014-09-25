@@ -24,6 +24,20 @@ class Thought < ActiveRecord::Base
     week
   end
 
+  def self.find_day(day)
+    today = Time.now.to_date.wday
+    date_index = nil
+    Date::DAYNAMES.each_with_index do |day_name, index|
+      date_index = index if day == day_name.downcase 
+    end
+    if today >= date_index
+      day_wanted = Time.now.to_date.prev_day(today - date_index)
+    else
+      day_wanted = Time.now.to_date.prev_day((today - dat_index)+ 7)
+    end
+    self.where(day: day_wanted)
+  end
+
   def day_name 
     Date::DAYNAMES[day.wday]
   end
