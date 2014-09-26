@@ -1,0 +1,38 @@
+<main class="content-view flex-fill">Main
+	<div class="content-frame">
+		<div class="hanging-nav">
+			<%  %>
+			<ul class="hanging-list">
+				<li class="hanging-tab day">
+					Sun
+				</li>
+				<li class="hanging-tab day">
+					Mon
+				</li>
+				<li class="hanging-tab day">
+					Tues
+				</li>
+				<li class="hanging-tab day">
+				  Wed
+				</li>
+				<li class="hanging-tab day">
+					Thurs
+				</li>
+				<li class="hanging-tab day">
+					Fri
+				</li>
+				<li class="hanging-tab day">
+					Sat
+				</li>
+			</ul>
+		</div>
+		<div class="preview">
+			<div class="preview-show">
+						<span class="preview-text">
+							<%= @current_day.first.body_sample unless @current_day.empty? %>...
+						</span>
+			</div>
+			<div class="go"><%= link_to "Read", "thoughts/" %></div>
+		</div>
+	</div>
+</main>
