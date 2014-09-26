@@ -1,0 +1,10 @@
+<header>
+	<span class="return"><%= link_to "Back", "/thoughts"%></span>
+</header>
+<div class="master-container">
+	<% if @thought.nil? %>
+	<p>No thoughts on this day!</p>
+	<% else %>
+	<%= @text %>
+	<% end %>
+</div>
