@@ -10,11 +10,14 @@ Website::App.controllers :log do
 		erb :"topics/index"
 	end 
 
-	get :show, map: "/log/:topic" do
-		@topic = Topic.find_by_name(params[:topic])
-		redirect "errors/404" if @topic.nil? 
-		@topics = @topic.sub_topics 
-		erb :"topics/show"
-	end 
-
+  get :show, map: "/log/:topic" do
+    @topic = Topic.find_by_name(params[:topic])
+    redirect "errors/404" if @topic.nil?
+    @piece =  @topic.pieces.first
+    unless @piece.nil? 
+      @text = @piece.body_sample
+    end
+    @topics = @topic.sub_topics 
+    erb :"topics/show"
+  end 
 end
