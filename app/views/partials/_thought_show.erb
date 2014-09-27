@@ -4,35 +4,41 @@
 			<%  %>
 			<ul class="hanging-list">
 				<li class="hanging-tab day">
-					Sun
+					<%= link_to "Sun", "thoughts/sunday" %>
 				</li>
 				<li class="hanging-tab day">
-					Mon
+					<%= link_to "Mon", "thoughts/monday" %>
 				</li>
 				<li class="hanging-tab day">
-					Tues
+				<%= link_to "Tues", "thoughts/tuesday" %>
 				</li>
 				<li class="hanging-tab day">
-				  Wed
+				<%= link_to "Wed", "thoughts/wednesday" %>
 				</li>
 				<li class="hanging-tab day">
-					Thurs
+					<%= link_to "Thurs", "thoughts/thursday" %>
 				</li>
 				<li class="hanging-tab day">
-					Fri
+			<%= link_to "Fri", "thoughts/friday" %>
 				</li>
 				<li class="hanging-tab day">
-					Sat
+			<%= link_to "Sat", "thoughts/saturday" %>
 				</li>
 			</ul>
 		</div>
 		<div class="preview">
 			<div class="preview-show">
 						<span class="preview-text">
-							<%= @current_day.first.body_sample unless @current_day.empty? %>...
+							<% if @current_day.empty? %>
+							<p>No thoughts today!</p>
+							<% else %>
+							<%= @current_day.first.body_sample %>...
+							<% end %>
 						</span>
 			</div>
-			<div class="go"><%= link_to "Read", "thoughts/" %></div>
+			<% unless @current_day.empty?  %>
+			<div class="go"><%= link_to "Read", "thoughts/#{Date::DAYNAMES[Time.now.to_date.wday].downcase}" %></div>
+			<% end %>
 		</div>
 	</div>
 </main>
