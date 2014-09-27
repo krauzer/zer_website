@@ -1,3 +1,24 @@
 <main class="content-view flex-fill">
+	<% if @material %>
+	<div class="content-frame intro">
+		<p>
+		 This is my website, and I'm building it out in
+		 experimental fashion, rather than relying on an existing CMS. 
+		 Is everything on it the most logical or efficient? No, but it's fun to experiment.
+		</p>
 
+		<p>
+			The site should be fairly easy to navigate. Stories I've written or am writing are
+			in the <em>Stories</em> section. Recent thoughts are in the <em>Thoughts</em> section, 
+			and logged/sorted/expanded ones are in the <em>Log</em> section.</p>
+		
+		<p>
+		 Much of the material isn't up yet, but that is because the site is still under construction!
+		</p>
+
+	</div>
+	<div class="about-nav">
+			<%= link_to "github", 'https://github.com/krauzer', class: "github" %>
+	</div>
+	<% end %>
 </main>

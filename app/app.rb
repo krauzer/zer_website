@@ -8,12 +8,12 @@ module Website
     enable :sessions
 
     get :index do 
-        erb :"home/index"
+      erb :"home/index"
     end
 
     get :index, :map => '/about' do
-        erb :"home/index"
-     end 
+      erb :"home/about"
+    end 
 
     not_found do 
         erb :"errors/404"
