@@ -1,7 +1,33 @@
-<main class="content-view flex-fill">Main
-	<% if @text %>
+<main class="content-view flex-fill">
+	<% if @piece %>
 	<div class="content-frame">
-	<%= @text %>
+		<div class="hanging-nav">
+			<ul class="hanging-list">
+				<% @topic.pieces.each do |piece| %>
+					
+				<li class="hanging-tab">
+				</li>
+				<% end %>
+			</ul>
+			<div class="topic-tab">
+				<%= @topic.name %>
+			</div>
+		</div>
+		<div class="preview">
+			<div class="title-show">
+				<span class="title">
+					<%=@piece.title  %>
+				</span>
+			</div>
+			<div class="preview-show">
+						<span class="preview-text">
+							<%= @text %>...
+						</span>
+			</div>
+			<div class="go">
+				<%= link_to "Read", "/pieces/#{@piece.id}" %>
+			</div>
+		</div>
 	</div>
 	<% end %>
 </main>
