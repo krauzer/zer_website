@@ -1,51 +1,37 @@
 @import url(http://fonts.googleapis.com/css?family=Lora|Nunito);
-/*Test colors: turquoise, lightcyan, steelblue, dodgerblue, darkslategray, navy*/
 
-/*Tablet view: 4 panes*/
 body{
-	font-family: "Lora", serif;
+   font-family: "Lora", serif;
 }
 
 a{text-decoration: none;}
-a:link {color: orangered;}
-a:visited {color:orangered;}
-a:hover {color: navy;}
+a:link {color: seagreen;}
+a:visited {color:seagreen;}
+a:hover {color: olivedrab;}
 
 
 
 header{
-	font-size: 2.25em; 
-	font-style: italic;  
-	width: 100%;
-	margin-top: 20px; 
-	text-align: center;
+  font-size: 2.25em; 
+  font-style: italic;  
+  width: 100%;
+  margin-top: 20px; 
+  text-align: center;
 }
 
 .title {
-text-align: center; 
+  text-align: center; 
 }
 
 .desc {
-	font-size: .825em; 
-	font-style: italic;
-}
-
-.master-container {
+  font-size: .825em; 
+  font-style: italic;
 }
 
 .toc {
-	text-align: center; 
+  text-align: center; 
 }
 
 table {
-	margin: auto;
-}
-
-@media screen and (max-width: 960px){
-
-}
-
-/*Mobile View: Door*/
-@media screen and (max-width: 480px){
-
+  margin: auto;
 }
