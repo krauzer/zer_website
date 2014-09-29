@@ -1,7 +1,8 @@
 module Website
   class App < Padrino::Application
     register SassInitializer
-    use ActiveRecord::ConnectionAdapters::ConnectionManagement
+    # use ActiveRecord::ConnectionAdapters::ConnectionManagement
+    use ConnectionPoolManagement
     register Padrino::Mailer
     register Padrino::Helpers
 
