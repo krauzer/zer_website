@@ -13,13 +13,34 @@
 #     :socket    => '/tmp/mysql.sock'
 #   }
 #
-ActiveRecord::Base.configurations[Padrino.env] = {
+ActiveRecord::Base.configurations[:development] = {
   adapter:   'postgresql',
   database:  ENV['POSTGRESQL_DATABASE'],
   username:  ENV['POSTGRESQL_USER'],
   password:  ENV['POSTGRESQL_PASSWORD'],
   host:      ENV['POSTGRESQL_HOST'],
   port:      5432
+
+}
+
+ActiveRecord::Base.configurations[:test] = {
+  adapter:   'postgresql',
+  database:  ENV['POSTGRESQL_DATABASE'],
+  username:  ENV['POSTGRESQL_USER'],
+  password:  ENV['POSTGRESQL_PASSWORD'],
+  host:      ENV['POSTGRESQL_HOST'],
+  port:      5432
+
+}
+
+postgres = URI.parse(ENV['DATABASE_URL'])
+ActiveRecord::Base.configurations[:production] = {
+  adapter:   'postgresql',
+  encoding: 'utf8',
+  database:  postgres.path[1..-1],
+  username:  postgres.user,
+  password:  postgres.password,
+  host:      postgres.host
 
 }
 
