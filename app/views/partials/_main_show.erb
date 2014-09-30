@@ -4,8 +4,11 @@
 		<div class="hanging-nav">
 			<ul class="hanging-list">
 				<% @topic.pieces.each do |piece| %>
-					
+
 				<li class="hanging-tab">
+					<span class="tab-text">
+						 <%= piece.proper_date %>
+					</span>
 				</li>
 				<% end %>
 			</ul>

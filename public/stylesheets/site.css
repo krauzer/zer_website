@@ -14,13 +14,13 @@ a:hover {color: olivedrab;}
 
 
 .name{
-  float: right; 
+  float: right;
 }
 
 .left-nav{
 	/*background-color: darkslategray; */
   width: 10em;
-  flex: 0 0 10em; 
+  flex: 0 0 10em;
 }
 
 .nav-button{
@@ -37,18 +37,28 @@ a:hover {color: olivedrab;}
 
 }
 
-.content-frame { 
+.content-frame {
   color: black;
-  font-family: Lora, serif; 
-  margin: 15% 20% 0 2%; 
+  font-family: Lora, serif;
+  margin: 15% 20% 0 2%;
   border-top: 4px solid silver;
   border-bottom: 4px solid silver;
   height: autos;
 }
 
+.intro {
+  font-size: .825em;
+  text-align: center;
+}
+
+.intro p {
+  margin-right: 5%;
+  margin-left: 5%;
+  line-height: 1.5em;
+}
 .hanging-nav{
   padding: 0 5%;
-  font-family: Nunito, serif; 
+  font-family: Nunito, serif;
 }
 
 .hanging-nav a:link {color: darkgreen;}
@@ -69,11 +79,21 @@ a:hover {color: olivedrab;}
   border-right: .07em solid #978282;
   display: inline-block;
   position: relative;
-  text-align: center; 
-  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: midnightblue;
+  width: 60px;
   height: 30px;
-  transition: background-color 0.2s linear, 
-              border-bottom 0.2s linear; 
+  transition: background-color 0.2s linear,
+              color 0.2s linear,
+              border-bottom 0.2s linear;
+}
+
+.tab-text{
+  font-size: .925em;
+  left:5px;
+  top: 10px;
+  position: relative;
 }
 
 .day {
@@ -85,17 +105,18 @@ a:hover {color: olivedrab;}
 
 .hanging-tab:hover{
   background-color: white;
-  border-bottom: 4px solid darkgreen; 
+  border-bottom: 4px solid darkgreen;
+  color: mediumblue;
 }
 
 .topic-tab{
-  color: navy; 
+  color: navy;
   display: inline-block;
   position: relative;
   float: right;
   border: 1px solid #978282;
   border-bottom: 4px solid #978282;
-  border-top: 0; 
+  border-top: 0;
   background-color: lightsalmon;
   padding: 4px;
   height: 30px;
@@ -109,16 +130,16 @@ a:hover {color: olivedrab;}
 
 }
 .title-show{
-  font-size: 1.25em; 
+  font-size: 1.25em;
   color: forestgreen;
   padding: 15px;
   padding-left: 0px;
 }
 
-.preview-show{ 
+.preview-show{
   text-align: center;
   font-style: italic;
-  font-size: .9em; 
+  font-size: .9em;
 }
 
 .go{
@@ -128,20 +149,20 @@ a:hover {color: olivedrab;}
 }
 
 .home-footer {
-  height: 2em; 
+  height: 2em;
   text-align: center;
   margin-top:25px;
 }
 
-.tab { 
+.tab {
   display: inline-block;
-  background-color: white; 
+  background-color: white;
   height: 90%;
   top:3px;
   border: 1px solid #978282;
-  border-bottom: 0px; 
-  padding: 0 6px; 
-  cursor: pointer; 
+  border-bottom: 0px;
+  padding: 0 6px;
+  cursor: pointer;
   position: relative;
   transition: background-color 0.25s ease-in,
               height 0.25s ease-in,
@@ -150,14 +171,14 @@ a:hover {color: olivedrab;}
 
 .tab:hover{
   background-color: lemonchiffon;
-  height: 100%; 
+  height: 100%;
   top: 0px;
 }
 
 .clicked {
   height: 20%;
-  bottom: 0px; 
-  background-color:khaki; 
+  bottom: 0px;
+  background-color:khaki;
 }
 
 .about-nav{
@@ -176,10 +197,10 @@ a:hover {color: olivedrab;}
 /*Flex stuff*/
 
 .flex {
-  display: -webkit-box;      
-  display: -moz-box;         
-  display: -ms-flexbox;      
-  display: -webkit-flex; 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display:flex;
 }
 
@@ -198,10 +219,10 @@ a:hover {color: olivedrab;}
 }
 
 .flex-first {
-  -webkit-box-ordinal-group: -1;   
-  -moz-box-ordinal-group: -1;      
-  -ms-flex-order: -1;             
-  -webkit-order: -1;                 
+  -webkit-box-ordinal-group: -1;
+  -moz-box-ordinal-group: -1;
+  -ms-flex-order: -1;
+  -webkit-order: -1;
   order: -1;
 }
 
