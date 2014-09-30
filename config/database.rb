@@ -1,3 +1,4 @@
+
 ##
 # You can use other adapters like:
 #
@@ -33,7 +34,7 @@ ActiveRecord::Base.configurations[:test] = {
 
 }
 
-postgres = URI.parse(ENV['DATABASE_URL'])
+postgres = URI.parse(ENV['DATABASE_URL'] || '')
 ActiveRecord::Base.configurations[:production] = {
   adapter:   'postgresql',
   encoding: 'utf8',
