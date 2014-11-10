@@ -1,8 +1,8 @@
 <header>
-	<span class="title"><%= @title %></span> 
+	<span class="title"><%= @content[:title] %></span>
 	<span class="return"><%= link_to "Back", "/log/#{@piece.topics.first.name}" %></span>
 </header>
 
 <div class="master-container">
-	<%= @text %>
+	<%= @content[:text] %>
 </div>
