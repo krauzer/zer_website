@@ -21,6 +21,7 @@ gem 'pg'
 gem 'dotenv'
 gem 'compass'
 gem 'redcarpet'
+gem 'active_type'
 
 # Test requirements
 gem 'rspec', :group => 'test'

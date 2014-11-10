@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    active_type (0.3.0)
+      activerecord (>= 3.2)
     activemodel (4.1.5)
       activesupport (= 4.1.5)
       builder (~> 3.1)
@@ -131,6 +133,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_type
   activerecord (>= 3.1)
   compass
   dotenv
